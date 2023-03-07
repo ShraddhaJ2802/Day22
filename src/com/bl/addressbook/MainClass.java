@@ -44,6 +44,9 @@ public class MainClass {
                     address.displayAddressBook();
                     break;
                 case 7:
+                    address.duplicateCheck();
+                    break;
+                case 8:
                     System.out.println("Exit");
                     k = 1;
                     break;

@@ -140,4 +140,23 @@ public class AddressBookMain {
         }
     }
 
+    public void duplicateCheck()
+    {
+        String first = null;
+        for (int k = 0; k < contactbook.size(); k++)
+        {
+            String contactName = contactbook.get(k).firstName;
+
+            if (first.equals(contactName))
+            {
+                System.out.println("This Person is Already Present");
+            }
+            else
+            {
+                System.out.println("You can Add this Person");
+                break;
+            }
+        }
+    }
+
 }
