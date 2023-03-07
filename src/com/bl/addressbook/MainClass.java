@@ -8,5 +8,7 @@ public class MainClass {
         AddressBookMain address = new AddressBookMain();
         address.addContact();
         address.displayPerson();
+        address.editPerson();
+
     }
 }

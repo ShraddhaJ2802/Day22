@@ -37,5 +37,65 @@ public class AddressBookMain {
         }
     }
 
+    public void editPerson() {
+
+        System.out.println("\n enter First name to edit details:");
+
+        Scanner scan = new Scanner(System.in);
+        String name = scan.next();
+
+        for (Contact person : contactbook) {
+            System.out.println(person.toString());
+
+            if (name.equals(person.firstName)) {
+
+                System.out.println("\"Select the option to edit: \n"
+                        + "1) Mobile no\n"
+                        + "2) Email-Id\n"
+                        + "3) Address\n"
+                        + "4) Quit");
+                int numb = scan.nextInt();
+
+                switch (numb) {
+                    case 1: {
+                        System.out.println("enter new Mobile number:");
+                        long mobileNo = scan.nextLong();
+
+                        person.setMobileNo(mobileNo);
+                        System.out.println("mobile no. is updated\n");
+                        break;
+                    }
+                    case 2: {
+                        System.out.println("enter new Email-id:");
+                        String email = scan.nextLine();
+
+                        person.setEmail(email);
+                        System.out.println("Email-id is updated\n");
+                        break;
+                    }
+                    case 3: {
+                        System.out.println("enter your city");
+                        String city = scan.nextLine();
+
+                        System.out.println("enter your state");
+                        String state = scan.nextLine();
+
+                        System.out.println("enter your zip code");
+                        int zip = scan.nextInt();
+
+                        person.setCity(city);
+                        person.setState(state);
+                        person.setZip(zip);
+                        System.out.println("Address is updated\n");
+                        break;
+                    }
+                    default:
+                        System.out.println("please enter right choice");
+                }
+            } else
+                System.out.println("Person is not registered");
+        }
+        System.out.println(toString());
+    }
 
 }
