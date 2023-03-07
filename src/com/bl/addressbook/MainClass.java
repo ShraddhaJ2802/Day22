@@ -38,6 +38,12 @@ public class MainClass {
                     address.deletePerson();
                     break;
                 case 5:
+                    address.newAddressBook();
+                    break;
+                case 6:
+                    address.displayAddressBook();
+                    break;
+                case 7:
                     System.out.println("Exit");
                     k = 1;
                     break;

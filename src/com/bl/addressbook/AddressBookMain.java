@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class AddressBookMain {
     public ArrayList<Contact> contactbook = new ArrayList<>();
+    ArrayList<AddressBookList> addressBookNameList = new ArrayList<>();
     public void addContact()
     {
         Scanner scan = new Scanner(System.in);
@@ -117,6 +118,25 @@ public class AddressBookMain {
             }
             else
                 System.out.println("please enter valid name");
+        }
+    }
+
+    public void newAddressBook()
+    {
+        System.out.println("Enter AddressBook Name");
+        Scanner scan = new Scanner(System.in);
+        String userInputBookName = scan.next();
+        AddressBookList addressbook = new AddressBookList(userInputBookName);
+        addressBookNameList.add(addressbook);
+        System.out.println("New Address Book Name is added to list");
+    }
+    public void displayAddressBook()
+    {
+
+        System.out.println("Existing AddressBook Names are : ");
+
+        for (AddressBookList addressBookList : addressBookNameList) {
+            System.out.println(addressBookList);
         }
     }
 
