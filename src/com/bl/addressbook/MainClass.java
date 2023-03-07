@@ -9,6 +9,6 @@ public class MainClass {
         address.addContact();
         address.displayPerson();
         address.editPerson();
-
+        address.deletePerson();
     }
 }
