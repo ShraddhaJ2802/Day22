@@ -1,6 +1,7 @@
 package com.bl.addressbook;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class AddressBookMain {
     public ArrayList<Contact> contactbook = new ArrayList<>();
@@ -205,5 +206,13 @@ public class AddressBookMain {
             System.out.println("Name : " + i.nextElement());
         }
     }
+    public void countByCity(){
+        System.out.println(contactbook.stream().collect(Collectors.groupingBy((Contact C) -> C.getCity())));
+        System.out.println((contactbook.stream().collect(Collectors.groupingBy((Contact C) -> C.getCity(),Collectors.counting()))));
+    }
 
+    public void countByState(){
+        System.out.println(contactbook.stream().collect(Collectors.groupingBy((Contact C) -> C.getState())));
+        System.out.println((contactbook.stream().collect(Collectors.groupingBy((Contact C) -> C.getState(),Collectors.counting()))));
+    }
 }

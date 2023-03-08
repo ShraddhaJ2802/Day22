@@ -23,7 +23,9 @@ public class MainClass {
         System.out.println("7. Check Duplicate Entry of Name");
         System.out.println("8.Search Person By City");
         System.out.println("9. Search Person By State");
-        System.out.println("10.Exit");
+        System.out.println("10.get number of contact persons Count by city");
+        System.out.println("11.get number of contact persons Count by state");
+        System.out.println("12.Exit");
 
         int k=0;
         while(k==0)
@@ -61,6 +63,12 @@ public class MainClass {
                     address.searchPersonByState();
                     break;
                 case 10:
+                    address.countByCity();
+                    break;
+                case 11:
+                    address.countByState();
+                    break;
+                case 12:
                     System.out.println("Exit");
                     k = 1;
                     break;
