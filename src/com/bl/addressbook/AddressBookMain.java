@@ -159,4 +159,21 @@ public class AddressBookMain {
         }
     }
 
+    public void searchPersonByCity()
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter City name to search Person by city name");
+        String userCity = scan.nextLine();
+
+        contactbook.stream().filter(map -> map.getCity().contains(userCity)).forEach(contactbook -> System.out.println(contactbook));
+    }
+    public void searchPersonByState()
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the state name to search Person by state name");
+        String userState = scan.nextLine();
+
+        contactbook.stream().filter(map -> map.getState().contains(userState)).forEach(contactbook -> System.out.println(contactbook));
+    }
+
 }
